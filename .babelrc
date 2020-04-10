@@ -1,0 +1,25 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "esmodules": true,
+        "uglify": true
+      }
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "@babel/plugin-proposal-class-properties",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "components": "./src/components/",
+        "pages": "./src/pages/",
+        "placeholders": "./src/placeholders/",
+        "modules": "./src/store/modules/",
+        "utils": "./src/utils/"
+      }
+    }]
+  ]
+}
